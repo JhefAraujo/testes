@@ -29,18 +29,40 @@ body {
 
 header {
     display: none;
+    color: black;
     align-items: center;
-    background-color: rgba(250, 250, 250, 0.384);
+    background-color: #f3e6e8;
+    background-image: linear-gradient(315deg, #f3e6e8 0%, #d5d0e5 74%);
     backdrop-filter: blur(7px);
-    border-radius: 50px;
+    border-radius: 5px;
     justify-content: center;
     position: fixed;
     top: 2vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 99999999999999;
-    animation: appear 1s;
+    animation: appear 1.5s;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+}
+
+nav {
+    width: 100%;
+}
+
+ul {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+}
+
+li > a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: large;
 }
 
 #nodisplay {
@@ -72,8 +94,9 @@ header {
     .vignette {
         background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.14889705882352944) 12%, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0) 85%, rgba(0, 0, 0, 1) 100%);
     }
+
     header {
-        height: 80px;
+        height: 60px;
         width: 90vw;
     }
 }
@@ -102,7 +125,31 @@ header {
     display: none;
     align-items: center;
     justify-content: center;
-    animation: aparecer 1s;
+    animation: 1s appear ease-in-out;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h6 {}
+
+@keyframes teste {
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 section {
@@ -129,11 +176,10 @@ main {
     align-items: center;
     justify-content: center;
     color: white;
-    animation: aparecer 1s;
 }
 
 .blur {
-    background-color: rgba(0, 0, 0, 0.426);
+    background-color: rgba(0, 0, 0, 0.548);
     backdrop-filter: blur(2px);
     height: 100vh;
     width: 100vw;
@@ -146,21 +192,13 @@ main {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
 }
 
-@keyframes aparecer {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-a {
+p > a {
     text-decoration: none;
     display: flex;
     column-gap: 4px;
